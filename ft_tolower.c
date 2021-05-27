@@ -1,36 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bcoenon <bcoenon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/27 12:12:28 by bcoenon           #+#    #+#             */
-/*   Updated: 2021/05/27 17:01:26 by bcoenon          ###   ########.fr       */
+/*   Created: 2021/05/27 16:07:28 by bcoenon           #+#    #+#             */
+/*   Updated: 2021/05/27 17:02:38 by bcoenon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	*ft_memccpy(void *restrict d, const void *restrict s, int c, size_t n)
+int	ft_tolower(int c)
 {
-	size_t			i;
-	unsigned char	*conv;
-	unsigned char	*dest;
-	unsigned char	charly;
-
-	i = 0;
-	conv = (unsigned char *)s;
-	dest = (unsigned char *)d;
-	charly = c;
-	while (i < n)
+	if (c >= 'A' && c <= 'Z')
 	{
-		dest[i] = conv[i];
-		if (dest[i] == charly)
-		{
-			return (d + i + 1);
-		}
-		i++;
+		return (c + 32);
 	}
-	return (0);
+	return (c);
 }
