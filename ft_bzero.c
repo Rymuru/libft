@@ -1,20 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bcoenon <bcoenon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/26 11:26:38 by bcoenon           #+#    #+#             */
-/*   Updated: 2021/05/26 14:14:51 by bcoenon          ###   ########.fr       */
+/*   Created: 2021/05/27 11:32:37 by bcoenon           #+#    #+#             */
+/*   Updated: 2021/05/27 11:43:02 by bcoenon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(int c)
+#include "libft.h"
+
+void	*ft_bzero(void *s, size_t n)
 {
-	if (c >= 32 && c <= 126)
+	size_t			i;
+	unsigned char	*conv;
+
+	i = 0;
+	conv = (unsigned char *)s;
+	while (i < n)
 	{
-		return (1);
+		conv[i] = 0;
+		i++;
 	}
-	return (0);
+	return (s = conv);
 }

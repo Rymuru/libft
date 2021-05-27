@@ -1,22 +1,20 @@
 
-SRCS	= ft_atoi.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c ft_strlen.c
+SRCS	= ft_atoi.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c ft_strlen.c ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c
 
 OBJS	= ${SRCS:.c=.o}
 
-NAME	= libft
+NAME	= libft.a
 
-CC		= cc
+CC		= gcc -c -o
+LINKER	= ar rcs
 RM		= rm -f
 
 CFLAGS	= -Wall -Wextra -Werror -g
 
-.c.o:
-			${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
-
 ${NAME}:	${OBJS}
-			cc -o ${NAME} ${OBJS}
+			${LINKER} ${NAME} ${OBJS}
 
-all:		{$NAME}
+all:		${NAME}
 
 clean:
 			rm ${OBJS}
