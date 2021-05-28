@@ -1,25 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bcoenon <bcoenon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/26 11:26:55 by bcoenon           #+#    #+#             */
-/*   Updated: 2021/05/28 14:28:48 by bcoenon          ###   ########.fr       */
+/*   Created: 2021/05/28 14:13:29 by bcoenon           #+#    #+#             */
+/*   Updated: 2021/05/28 14:52:58 by bcoenon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+char	*ft_strrchr(const char *s, int c)
 {
-	unsigned int	i;
+	size_t	i;
 
-	i = 0;
-	while (s[i] != 0)
+	i = ft_strlen(s);
+	if (s[i] == c)
+		return ((char *)s + i);
+	i--;
+	while (i-- > 0 && s[i])
 	{
-		i++;
+		if (s[i] == c)
+			return ((char *)s + i);
 	}
-	return (i);
+	return (NULL);
 }
