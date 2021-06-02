@@ -20,6 +20,9 @@ SRCS	=	\
 			ft_strrchr.c	\
 			ft_strncmp.c	\
 			ft_strdup.c		\
+			ft_strlcpy.c	\
+			ft_strlcat.c	\
+			ft_strnstr.c	\
 			ft_calloc.c
 
 OBJS	= ${SRCS:.c=.o}
