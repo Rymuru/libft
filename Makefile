@@ -23,6 +23,7 @@ SRCS	=	\
 			ft_strlcpy.c	\
 			ft_strlcat.c	\
 			ft_strnstr.c	\
+			ft_substr.c		\
 			ft_calloc.c
 
 OBJS	= ${SRCS:.c=.o}

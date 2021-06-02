@@ -6,7 +6,7 @@
 /*   By: bcoenon <bcoenon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/26 12:19:25 by bcoenon           #+#    #+#             */
-/*   Updated: 2021/05/28 17:22:34 by bcoenon          ###   ########.fr       */
+/*   Updated: 2021/06/02 14:02:20 by bcoenon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strdup(const char *s1);
 char	*ft_strnstr(const char *h, const char *n, size_t len);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 void	*memchr(const void *s, int c, size_t n);
 void	*ft_bzero(void *s, size_t n);
