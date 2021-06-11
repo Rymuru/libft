@@ -6,7 +6,7 @@
 /*   By: bcoenon <bcoenon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/02 15:08:40 by bcoenon           #+#    #+#             */
-/*   Updated: 2021/06/02 15:31:20 by bcoenon          ###   ########.fr       */
+/*   Updated: 2021/06/11 14:32:13 by bcoenon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	}
 	while (s2[j])
 	{
-		mem[i +j] = s2[j];
+		mem[i + j] = s2[j];
 		j++;
 	}
 	mem[i + j] = '\0';
