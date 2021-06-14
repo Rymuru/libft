@@ -6,7 +6,7 @@
 /*   By: bcoenon <bcoenon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/10 23:12:17 by bcoenon           #+#    #+#             */
-/*   Updated: 2021/06/11 14:32:53 by bcoenon          ###   ########.fr       */
+/*   Updated: 2021/06/14 13:40:55 by bcoenon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	unsigned int	i;
 	char			*new_str;
 
-	if (!s)
+	if (!s || !f)
 		return (NULL);
 	new_str = (char *)malloc(sizeof(char) * ft_strlen(s) + 1);
 	if (!new_str)
