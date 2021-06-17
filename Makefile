@@ -41,14 +41,17 @@ NAME	= libft.a
 
 CC		= gcc -c -o
 LINKER	= ar rcs
-RM		= rm -f
+RM		= rm -rf
 
-CFLAGS	= -Wall -Wextra -Werror -g
+CFLAGS	= -Wall -Wextra -Werror
 
 ${NAME}:	${OBJS}
 			${LINKER} ${NAME} ${OBJS}
 
 all:		${NAME}
+
+$(OBJSD)%.o:    $(SRCSD)%.c
+	$(CC) $@ $^ $(CFLAGS)
 
 clean:
 			rm ${OBJS}
