@@ -50,8 +50,8 @@ ${NAME}:	${OBJS}
 
 all:		${NAME}
 
-$(OBJSD)%.o:    $(SRCSD)%.c
-	$(CC) $@ $^ $(CFLAGS)
+${OBJSD}%.o:    ${SRCSD}%.c
+	${CC} $@ $^ ${CFLAGS}
 
 clean:
 			rm ${OBJS}
