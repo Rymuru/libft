@@ -6,9 +6,11 @@
 /*   By: bcoenon <bcoenon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/26 11:17:10 by bcoenon           #+#    #+#             */
-/*   Updated: 2021/05/26 11:24:35 by bcoenon          ###   ########.fr       */
+/*   Updated: 2021/06/18 12:57:52 by bcoenon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_atoi(const char *str)
 {

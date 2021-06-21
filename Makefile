@@ -54,7 +54,7 @@ ${OBJSD}%.o:    ${SRCSD}%.c
 	${CC} $@ $^ ${CFLAGS}
 
 clean:
-			rm ${OBJS}
+			${RM} ${OBJS}
 
 fclean:		clean
 			${RM} ${NAME}
